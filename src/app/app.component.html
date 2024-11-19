@@ -8,4 +8,12 @@ Data From Child Component: {{Cdata}}
 <br>
 <br>
 <br>
+<button type="button" (click)="login()">Login</button>
+<button type="button" (click)="logout()">Logout</button>
+@if(isValid){
+  <p>You Are Logged In !!</p>
+}
+@else{
+  <p>You Are not Logged In !!</p>
+}
 <app-employee [Pdata]="Pcomponent.value" (childevent)="getdata($event)"></app-employee>

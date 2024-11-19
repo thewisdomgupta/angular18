@@ -7,13 +7,23 @@ import { EmployeeComponent } from './employee/employee.component';
   standalone: true,
   imports: [RouterOutlet, EmployeeComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  preserveWhitespaces: true
 })
 export class AppComponent {
   title = 'angularApp';
   Cdata: any;
+  isValid = false;
   getdata(val:any){
     this.Cdata=val;
+  }
+
+  login(){
+    this.isValid = true;
+  }
+
+  logout(){
+    this.isValid = false;
   }
 
 }
