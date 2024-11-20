@@ -16,4 +16,25 @@ Data From Child Component: {{Cdata}}
 @else{
   <p>You Are not Logged In !!</p>
 }
+
+@switch(name){
+  @case('Mohan'){
+    <p>Hello Mohan</p>
+  }
+  @case('Ram'){
+    <p>Hello Ram</p>
+  }
+  @case('Dinker'){
+    <p>Hello Dinker</p>
+  }
+  @case('Dinesh'){
+    <p>Hello Dinesh</p>
+  }
+  @case('Saket'){
+    <p>Hello Saket</p>
+  }
+  @default{
+    <p>No Data Match</p>
+  }
+}
 <app-employee [Pdata]="Pcomponent.value" (childevent)="getdata($event)"></app-employee>

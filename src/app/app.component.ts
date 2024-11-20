@@ -14,6 +14,7 @@ export class AppComponent {
   title = 'angularApp';
   Cdata: any;
   isValid = false;
+  name= 'Ram'
   getdata(val:any){
     this.Cdata=val;
   }
