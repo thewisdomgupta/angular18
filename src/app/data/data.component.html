@@ -1,0 +1,23 @@
+<p>data works!</p>
+
+<table border="1">
+    <tr>
+      <th>SR. NO.</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Department</th>
+    </tr>
+    @for(emp of employees; track emp.id; let i = $index){
+      <tr>
+        <td>{{i+1}}</td>
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.department}}</td>
+      </tr>
+    }
+    @empty{
+      <p>No Result Found</p>
+    }
+    
+  
+  </table>
